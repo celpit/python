@@ -12,10 +12,31 @@ def reverse(input):
 
     return reversestring
 
+def palindrome(input):
+    rev = reverse(input)
+   
+    if rev == input:
+        return True
+    else:
+        return False
+
+
+
+
+
+
+
 def main():
-    str = (input('Enter Sentence:'))
+    str = (input('Enter Word:'))
     rev = reverse(str)
     print(rev)
+
+    ispalindrome = palindrome(str)
+    if ispalindrome:
+        print('palindrome')
+    else:
+        print('not palindrome')
+
 
 if __name__ == '__main__':
     main()
