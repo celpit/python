@@ -14,3 +14,6 @@ tic-tac-toe game with NxN board
 
 ## listsort.py
 makes a list of random numbers and sorts them from least to greatest
+
+## textsummary.py
+summarizes text and files
