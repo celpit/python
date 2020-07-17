@@ -2,21 +2,25 @@
 
 
 def textsummary(input):
+    f = open(input)
+    contents = (f.read())
+    trimmedinput = contents.strip()  #input.strip
     countedinput = []
-    inputlist = list(input)
-    inputlistsize = len(inputlist)
-    wordcount = 0
+    inputlist = list(trimmedinput)
+    inputlistsize = len(trimmedinput)
+    wordcount = 1
     lettercount = 0
     vowelcount = 0
     sentencecount = 0
     vowelList = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']
+    print(trimmedinput)
 
     for i in range(inputlistsize):
         # cur is current character in list
         cur = inputlist[i]
 
         # word count
-        if cur == ' ':
+        if cur == ' ' and inputlist[i - 1] != ' ':
             wordcount = wordcount + 1
 
         # letter count
@@ -41,6 +45,8 @@ def textsummary(input):
     countedinput.append(sentencecount)
 
     print(countedinput)
+
+    f.close()
 
     return countedinput
 
